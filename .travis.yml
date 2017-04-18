@@ -12,9 +12,8 @@ before_install:
   - chmod +x gradlew
   - mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('')"
   - mysql -e 'create database userbase'
-  - mysql -u root -h 127.0.0.1 -e 'SHOW DATABASES'
+
 
 
 install:
   - ./gradlew test --info
-

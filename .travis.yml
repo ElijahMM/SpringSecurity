@@ -1,7 +1,20 @@
 language: java
 jdk:
- - oraclejdk8
+  - oraclejdk8
+
+service:
+  - mysql
+
+sudo:
+  - true
+
 before_install:
-- chmod +x gradlew
+  - chmod +x gradlew
+  - chmod +x ./scripts/*
+  - ./script/travis_mysql_5.7.sh
+  - ./script/mysql-reset-root-password.sh
+
+
 install:
-  - './gradlew assemble --stacktrace'
+  - ./gradlew test --debug
+

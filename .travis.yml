@@ -10,10 +10,9 @@ sudo:
 
 before_install:
   - chmod +x gradlew
-  - chmod +x ./scripts/*
-  - ./script/travis_mysql_5.7.sh
-  - ./script/mysql-reset-root-password.sh
 
+before_script:
+  - mysql -e 'create database userbase'
 
 install:
   - ./gradlew test --debug

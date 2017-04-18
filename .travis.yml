@@ -16,5 +16,5 @@ before_install:
 
 
 install:
-  - ./gradlew test --debug
+  - ./gradlew test --info
 

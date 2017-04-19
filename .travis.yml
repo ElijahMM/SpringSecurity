@@ -4,6 +4,6 @@ jdk:
   - oraclejdk8
 
 install:
-  - ./gradlew --stacktrace
+  - ./gradlew test --debug
 notifications:
   email: ignatatassist@gmail.com

@@ -27,7 +27,7 @@ public class DemoApplicationTests {
     @Autowired
     MockMvc mockMvc;
     private String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaWhhaSIsImV4cCI6MTQ5MTkxODEyOX0.TQJcR_iWrM39r7GmJDRV73r8-8soNofMemCB_6NpdU4jFvC0Z43V-3QFtP4lALKkkXtyOAjJoBj8pJP28R670Q";
-
+    /*
     @Test
     public void testGetAllUsersAndExpectStatusOk() throws Exception {
         this.mockMvc.perform(get("/api/user/all")
@@ -63,5 +63,5 @@ public class DemoApplicationTests {
                 .andExpect(status().isOk())
                 .andReturn();
     }
-
+*/
 }

@@ -12,5 +12,8 @@ install:
 notifications:
   email: ignatatassist@gmail.com
 
+before_script:
+  - cp .travis.database.yml config/database.yml
+
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS userbase;'

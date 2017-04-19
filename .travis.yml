@@ -2,18 +2,3 @@ language: java
 jdk:
   - oraclejdk8
 
-service:
-  - mysql
-
-sudo:
-  - true
-
-before_install:
-  - chmod +x gradlew
-  - mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('')"
-  - mysql -e 'create database userbase'
-
-
-
-install:
-  - ./gradlew test --info

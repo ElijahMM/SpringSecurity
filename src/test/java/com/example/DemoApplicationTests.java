@@ -12,6 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -27,6 +28,12 @@ public class DemoApplicationTests {
     @Autowired
     MockMvc mockMvc;
     private String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaWhhaSIsImV4cCI6MTQ5MTkxODEyOX0.TQJcR_iWrM39r7GmJDRV73r8-8soNofMemCB_6NpdU4jFvC0Z43V-3QFtP4lALKkkXtyOAjJoBj8pJP28R670Q";
+
+    @Test
+    public void testTest() {
+        String str = "Junit is working fine";
+        assertEquals("Junit is working fine", str);
+    }
     /*
     @Test
     public void testGetAllUsersAndExpectStatusOk() throws Exception {
